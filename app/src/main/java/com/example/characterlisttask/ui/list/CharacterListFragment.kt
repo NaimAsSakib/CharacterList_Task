@@ -30,6 +30,7 @@ class CharacterListFragment : Fragment() {
 
         viewModel.characterListResponse.observe(requireActivity()){
             if (it.first().name?.isNotEmpty() == true){
+                binding.progressBar.visibility = View.GONE
                 binding.rcvList.adapter = CharacterListAdapter(it){ id ->
                     val bundle = bundleOf(
                         "id" to id,

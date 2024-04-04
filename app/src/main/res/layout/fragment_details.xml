@@ -17,24 +17,37 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="15dp">
 
+        <ImageView
+            android:id="@+id/iv_character"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/baseline_person_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideLine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25"/>
+            app:layout_constraintGuide_percent="0.35"/>
 
         <TextView
             android:id="@+id/tv_name_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:maxLines="1"
             android:padding="5dp"
             android:text="Name: "
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/iv_character"/>
 
         <TextView
             android:id="@+id/tv_name_value"
@@ -49,6 +62,14 @@
             app:layout_constraintStart_toStartOf="@id/guideLine"
             app:layout_constraintTop_toTopOf="@id/tv_name_title" />
 
+        <View
+            android:id="@+id/view_name"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_title"/>
+
 
         <TextView
             android:id="@+id/tv_species_title"
@@ -61,7 +82,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_name_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_name_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_name" />
 
         <TextView
             android:id="@+id/tv_species_value"
@@ -76,6 +97,14 @@
             app:layout_constraintStart_toStartOf="@id/tv_name_value"
             app:layout_constraintTop_toTopOf="@id/tv_species_title" />
 
+        <View
+            android:id="@+id/view_species"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_species_title"/>
+
         <TextView
             android:id="@+id/tv_gender_title"
             android:layout_width="wrap_content"
@@ -87,7 +116,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_species_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_species_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_species" />
 
         <TextView
             android:id="@+id/tv_gender_value"
@@ -102,6 +131,14 @@
             app:layout_constraintStart_toStartOf="@id/tv_name_value"
             app:layout_constraintTop_toTopOf="@id/tv_gender_title" />
 
+        <View
+            android:id="@+id/view_gender"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender_title"/>
+
         <TextView
             android:id="@+id/tv_house_title"
             android:layout_width="wrap_content"
@@ -109,11 +146,11 @@
             android:layout_marginTop="5dp"
             android:maxLines="1"
             android:padding="5dp"
-            android:text="Gender: "
+            android:text="House: "
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_gender_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_gender_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_gender" />
 
         <TextView
             android:id="@+id/tv_house_value"
@@ -128,6 +165,15 @@
             app:layout_constraintStart_toStartOf="@id/tv_name_value"
             app:layout_constraintTop_toTopOf="@id/tv_house_title" />
 
+        <View
+            android:id="@+id/view_house"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_house_title"/>
+
+
         <TextView
             android:id="@+id/tv_dob_title"
             android:layout_width="wrap_content"
@@ -139,7 +185,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_house_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_house_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_house" />
 
         <TextView
             android:id="@+id/tv_dob_value"
@@ -154,6 +200,14 @@
             app:layout_constraintStart_toStartOf="@id/tv_name_value"
             app:layout_constraintTop_toTopOf="@id/tv_dob_title" />
 
+        <View
+            android:id="@+id/view_dob"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dob_title"/>
+
         <TextView
             android:id="@+id/tv_dob_year_title"
             android:layout_width="wrap_content"
@@ -165,7 +219,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_dob_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_dob_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_dob" />
 
         <TextView
             android:id="@+id/tv_dob_year_value"
@@ -180,6 +234,13 @@
             app:layout_constraintTop_toTopOf="@id/tv_dob_year_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_dob_year"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dob_year_title"/>
 
         <TextView
             android:id="@+id/tv_wizard_title"
@@ -192,7 +253,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_dob_year_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_dob_year_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_dob_year" />
 
         <TextView
             android:id="@+id/tv_wizard_value"
@@ -207,6 +268,14 @@
             app:layout_constraintTop_toTopOf="@id/tv_wizard_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_wizard"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wizard_title"/>
+
         <TextView
             android:id="@+id/tv_ancestry_title"
             android:layout_width="wrap_content"
@@ -218,7 +287,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_wizard_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_wizard_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_wizard" />
 
         <TextView
             android:id="@+id/tv_ancestry_value"
@@ -233,6 +302,14 @@
             app:layout_constraintTop_toTopOf="@id/tv_ancestry_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_ancestry"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ancestry_title"/>
+
         <TextView
             android:id="@+id/tv_eye_title"
             android:layout_width="wrap_content"
@@ -244,7 +321,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_ancestry_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_ancestry_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_ancestry" />
 
         <TextView
             android:id="@+id/tv_eye_value"
@@ -258,6 +335,13 @@
             app:layout_constraintBottom_toBottomOf="@id/tv_eye_title"
             app:layout_constraintTop_toTopOf="@id/tv_eye_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
+        <View
+            android:id="@+id/view_eye"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_eye_title"/>
 
         <TextView
             android:id="@+id/tv_hair_title"
@@ -270,7 +354,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_eye_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_eye_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_eye" />
 
         <TextView
             android:id="@+id/tv_hair_value"
@@ -285,6 +369,14 @@
             app:layout_constraintTop_toTopOf="@id/tv_hair_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_hair"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hair_title"/>
+
 
         <TextView
             android:id="@+id/tv_patronus_title"
@@ -297,7 +389,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_hair_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_hair_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_hair" />
 
         <TextView
             android:id="@+id/tv_patronus_value"
@@ -312,6 +404,13 @@
             app:layout_constraintTop_toTopOf="@id/tv_patronus_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_patronus"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_patronus_title"/>
 
         <TextView
             android:id="@+id/tv_actor_title"
@@ -324,7 +423,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_patronus_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_patronus_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_patronus" />
 
         <TextView
             android:id="@+id/tv_actor_value"
@@ -339,6 +438,14 @@
             app:layout_constraintTop_toTopOf="@id/tv_actor_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_actor"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_actor_title"/>
+
         <TextView
             android:id="@+id/tv_alive_title"
             android:layout_width="wrap_content"
@@ -350,7 +457,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_actor_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_actor_title" />
+            app:layout_constraintTop_toBottomOf="@id/view_actor" />
 
         <TextView
             android:id="@+id/tv_alive_value"
@@ -365,7 +472,25 @@
             app:layout_constraintTop_toTopOf="@id/tv_alive_title"
             app:layout_constraintStart_toStartOf="@id/tv_name_value" />
 
+        <View
+            android:id="@+id/view_alive"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alive_title"/>
 
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
