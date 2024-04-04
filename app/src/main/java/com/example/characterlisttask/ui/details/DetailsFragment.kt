@@ -20,4 +20,9 @@ class DetailsFragment : Fragment() {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
         return (binding.root)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val name = arguments?.getString("id")
+    }
 }

@@ -1,14 +1,17 @@
 package com.example.characterlisttask.api.models
 
+
 import com.google.gson.annotations.SerializedName
 
-data class CharacterResponse(
+class CharacterListResponse : ArrayList<CharacterListResponseItem>()
+
+data class CharacterListResponseItem(
     @SerializedName("actor")
     val actor: String?,
     @SerializedName("alive")
     val alive: Boolean?,
     @SerializedName("alternate_actors")
-    val alternateActors: List<Any?>?,
+    val alternateActors: List<String?>?,
     @SerializedName("alternate_names")
     val alternateNames: List<String?>?,
     @SerializedName("ancestry")
@@ -49,7 +52,7 @@ data class Wand(
     @SerializedName("core")
     val core: String?,
     @SerializedName("length")
-    val length: Int?,
+    val length: Double?,
     @SerializedName("wood")
     val wood: String?
 )
