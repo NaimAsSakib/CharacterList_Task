@@ -38,17 +38,17 @@ class DetailsFragment : Fragment() {
                 .placeholder(R.drawable.baseline_person_24)
                 .into(binding.ivCharacter)
 
-            binding.tvNameValue.text = it.first().name?:"N/A"
-            binding.tvSpeciesValue.text = it.first().species?:"N/A"
-            binding.tvGenderValue.text = it.first().gender?:"N/A"
-            binding.tvHouseValue.text = it.first().house?:"N/A"
-            binding.tvDobValue.text = it.first().dateOfBirth?:"N/A"
+            binding.tvNameValue.text = it.first().name?:""
+            binding.tvSpeciesValue.text = it.first().species?:""
+            binding.tvGenderValue.text = it.first().gender?:""
+            binding.tvHouseValue.text = it.first().house?:""
+            binding.tvDobValue.text = it.first().dateOfBirth?:""
             binding.tvDobYearValue.text = it.first().yearOfBirth.toString()
-            binding.tvAncestryValue.text = it.first().ancestry?:"N/A"
-            binding.tvEyeValue.text = it.first().eyeColour?:"N/A"
-            binding.tvHairValue.text = it.first().hairColour?:"N/A"
-            binding.tvPatronusValue.text = it.first().patronus?:"N/A"
-            binding.tvActorValue.text = it.first().actor?:"N/A"
+            binding.tvAncestryValue.text = it.first().ancestry?:""
+            binding.tvEyeValue.text = it.first().eyeColour?:""
+            binding.tvHairValue.text = it.first().hairColour?:""
+            binding.tvPatronusValue.text = it.first().patronus?:""
+            binding.tvActorValue.text = it.first().actor?:""
             binding.tvAliveValue.text = (it.first().alive?:"").toString()
         }
         viewModel.getDetails(id?:"")
